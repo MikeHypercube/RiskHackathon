@@ -1,0 +1,223 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix : <http://www.semanticweb.org/ontologies/2014/2/RiskAssessment.owl#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/ontologies/2014/2/RiskAssessment.owl> .
+
+<http://www.semanticweb.org/ontologies/2014/2/RiskAssessment.owl> rdf:type owl:Ontology .
+
+
+#################################################################
+#
+#    Annotation properties
+#
+#################################################################
+
+
+
+
+#################################################################
+#
+#    Datatypes
+#
+#################################################################
+
+
+
+
+#################################################################
+#
+#    Object Properties
+#
+#################################################################
+
+
+###  http://www.semanticweb.org/ontologies/2014/2/RiskAssessment.owl#Affect
+
+:Affect rdf:type owl:ObjectProperty ;
+        
+        rdfs:domain :Actions ;
+        
+        rdfs:range :Risk .
+
+
+
+###  http://www.semanticweb.org/ontologies/2014/2/RiskAssessment.owl#controls
+
+:controls rdf:type owl:ObjectProperty ;
+          
+          rdfs:domain :Actions ;
+          
+          rdfs:range :Risk ;
+          
+          rdfs:subPropertyOf :isBeneficial .
+
+
+
+###  http://www.semanticweb.org/ontologies/2014/2/RiskAssessment.owl#isAdverse
+
+:isAdverse rdf:type owl:ObjectProperty ;
+           
+           rdfs:range :Impact ;
+           
+           rdfs:domain :Loss ;
+           
+           owl:propertyDisjointWith :isBeneficial .
+
+
+
+###  http://www.semanticweb.org/ontologies/2014/2/RiskAssessment.owl#isBeneficial
+
+:isBeneficial rdf:type owl:ObjectProperty ;
+              
+              rdfs:domain :Gain ;
+              
+              rdfs:range :Impact ;
+              
+              rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+###  http://www.semanticweb.org/ontologies/2014/2/RiskAssessment.owl#isCollectionOf
+
+:isCollectionOf rdf:type owl:ObjectProperty ;
+                
+                rdfs:domain :Exposure ;
+                
+                rdfs:range :Impact .
+
+
+
+
+
+#################################################################
+#
+#    Classes
+#
+#################################################################
+
+
+###  http://www.semanticweb.org/ontologies/2014/2/RiskAssessment.owl#Actions
+
+:Actions rdf:type owl:Class ;
+         
+         rdfs:subClassOf [ rdf:type owl:Class ;
+                           owl:unionOf ( :Diversification
+                                         :Limit
+                                         :insurance
+                                       )
+                         ] .
+
+
+
+###  http://www.semanticweb.org/ontologies/2014/2/RiskAssessment.owl#Diversification
+
+:Diversification rdf:type owl:Class ;
+                 
+                 rdfs:subClassOf :Actions .
+
+
+
+###  http://www.semanticweb.org/ontologies/2014/2/RiskAssessment.owl#Event
+
+:Event rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/ontologies/2014/2/RiskAssessment.owl#Exposure
+
+:Exposure rdf:type owl:Class ;
+          
+          rdfs:subClassOf owl:Thing ;
+          
+          rdfs:comment "Exposure represents the  maximum extent to which the occurrence of a specified event or events may impact on the agent that is at risk of loss" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2014/2/RiskAssessment.owl#Gain
+
+:Gain rdf:type owl:Class ;
+      
+      rdfs:subClassOf :Impact ;
+      
+      owl:disjointWith :Loss ;
+      
+      rdfs:comment "A measure of the consequence of a specified beneficial outcome upon the agent that is affected " .
+
+
+
+###  http://www.semanticweb.org/ontologies/2014/2/RiskAssessment.owl#Hazard
+
+:Hazard rdf:type owl:Class ;
+        
+        rdfs:subClassOf :Event .
+
+
+
+###  http://www.semanticweb.org/ontologies/2014/2/RiskAssessment.owl#Impact
+
+:Impact rdf:type owl:Class ;
+        
+        rdfs:subClassOf :Outcome ;
+        
+        rdfs:comment "a quantification of the consequence of the outcomes of an identified event  or events  if the event actually occurred  typically this will be an estimate of that consequence.  It is expressed in comparable terms that enable the assessor to compare the consequences of different outcomes" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2014/2/RiskAssessment.owl#Limit
+
+:Limit rdf:type owl:Class ;
+       
+       rdfs:subClassOf :Actions .
+
+
+
+###  http://www.semanticweb.org/ontologies/2014/2/RiskAssessment.owl#Loss
+
+:Loss rdf:type owl:Class ;
+      
+      rdfs:subClassOf :Impact ;
+      
+      rdfs:comment "A measure of the consequence of a specified adverse outcome upon the agent that is affected " .
+
+
+
+###  http://www.semanticweb.org/ontologies/2014/2/RiskAssessment.owl#Outcome
+
+:Outcome rdf:type owl:Class ;
+         
+         rdfs:comment "A change in the state of the environment that can be observed and tested in order to determine whether it has or has not occurred it may be a single happening or it may be the consequence of an complex sequence of events,  each of which is a simple  occurent thing." .
+
+
+
+###  http://www.semanticweb.org/ontologies/2014/2/RiskAssessment.owl#Probability
+
+:Probability rdf:type owl:Class ;
+             
+             rdfs:subClassOf owl:Thing ;
+             
+             rdfs:comment "A measure of the likelihood  that a specified event or set of events may occur  expressed on a linear scale from 0 where there is no measurable likelihood of the eventoccurring in a specified time horizon, to 1 where the event is certain to occur." .
+
+
+
+###  http://www.semanticweb.org/ontologies/2014/2/RiskAssessment.owl#Risk
+
+:Risk rdf:type owl:Class ;
+      
+      rdfs:comment "A  statistical quantification (e.g. expected Value) of the consequence  that a specified event may have on the interested agent" .
+
+
+
+###  http://www.semanticweb.org/ontologies/2014/2/RiskAssessment.owl#insurance
+
+:insurance rdf:type owl:Class ;
+           
+           rdfs:subClassOf :Actions .
+
+
+
+
+###  Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net
+

@@ -1,0 +1,155 @@
+@base <http://example.org/trajectory-ont> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix : <http://example.org/trajectory-ont#> .
+
+<> a owl:Ontology;
+   rdfs:comment "rough encoding of Ontology Design Pattern from COSIT-13 paper".
+
+# (1)
+
+:Fix
+  rdfs:subClassOf
+    [ a owl:Restriction;
+      owl:onProperty :atTime;
+      owl:someValuesFrom time:TemporalThing ],
+    [ a owl:Restriction;
+      owl:onProperty :hasLocation;
+      owl:someValuesFrom :Position ],
+    [ a owl:Restriction;
+      owl:onProperty [ owl:inverseOf :hasFix ];
+      owl:someValuesFrom :SemanticTrajectory ].
+
+# (2)
+
+:Segment
+  rdfs:subClassOf
+    [ a owl:Restriction;
+      owl:onProperty :startsFrom;
+      owl:someValuesFrom :Fix ],
+    [ a owl:Restriction;
+      owl:onProperty :endsAt;
+      owl:someValuesFrom :Fix ].
+
+# (3)
+
+:startsFrom
+  a owl:FunctionalProperty .
+
+# (4)
+
+:endsAt
+  a owl:FunctionalProperty .
+
+# (5)
+
+:Segment
+  rdfs:subClassOf
+    [ a owl:Restriction;
+      owl:onProperty [ owl:inverseOf :hasSegment ];
+      owl:someValuesFrom :SemanticTrajectory ].
+
+# (6)
+
+:hasNext
+  owl:propertyChainAxiom ( [ owl:inverseOf :startsFrom ]
+                           :endsAt ).
+
+# (7)
+
+:hasNext
+  rdfs:subPropertyOf :hasSuccessor .
+
+# (8)
+
+:hasSuccessor a owl:TransitiveProperty .
+
+# (9)
+
+:hasNext owl:inverseOf :hasPrevious .
+
+# (10)
+
+:hasSuccessor owl:inverseOf :hasPredecessor .
+
+# (11)
+
+:StartingFix
+  owl:intersectionOf (:Fix 
+                      [ a owl:Restriction;
+                        owl:onProperty [ owl:inverseOf :endsAt ];
+                        owl:someValuesFrom :Segment ]).
+
+# (12)
+
+:EndingFix
+  owl:intersectionOf (:Fix
+                      [ a owl:Restriction;
+                        owl:onProperty [ owl:inverseOf :startsFrom ];
+                        owl:someValuesFrom :Segment ]).
+
+# (13)
+
+:StartingSegment
+  owl:intersectionOf (:Segment
+                      [ a owl:Restriction;
+                        owl:onProperty :startsFrom;
+                        owl:someValuesFrom :StartingFix ]).
+
+# (14)
+
+:EndingSegment
+  owl:intersectionOf (:Segment
+                      [ a owl:Restriction;
+                        owl:onProperty :endsAt;
+                        owl:someValuesFrom :EndingFix ]).
+
+
+# (15)
+
+:SemanticTrajectory
+  rdfs:subClassOf
+    [ a owl:Restriction;
+      owl:onProperty :hasSegment;
+      owl:someValuesFrom :Segment ].
+
+# (16)
+
+:hasFix
+  owl:propertyChainAxiom (:hasSegment :startsFrom).
+
+# (17)
+
+:hasFix
+  owl:propertyChainAxiom (:hasSegment :endsAt).
+
+# (18)
+
+[ a owl:Restriction;
+  owl:onProperty :hasSegment;
+  owl:someValuesFrom :Segment ]
+  rdfs:subClassOf :SemanticTrajectory.
+
+# (19)
+
+[ a owl:Restriction;
+  owl:onProperty [ owl:inverseOf :hasSegment ];
+  owl:someValuesFrom :SemanticTrajectory ]
+  rdfs:subClassOf :Segment.
+
+# (20)
+
+[ a owl:Restriction;
+  owl:onProperty :hasFix;
+  owl:someValuesFrom :Fix ] # was :Segment
+  rdfs:subClassOf :SemanticTrajectory.
+
+# (21)
+
+[ a owl:Restriction;
+  owl:onProperty [ owl:inverseOf :hasFix ];
+  owl:someValuesFrom :SemanticTrajectory ]
+  rdfs:subClassOf :Fix.
+

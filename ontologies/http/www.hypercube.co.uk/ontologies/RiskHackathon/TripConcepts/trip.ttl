@@ -1,0 +1,250 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix traj: <http://example.org/trajectory-ont#> .
+@prefix MotionP: <http://example.org/motion-ont#> .
+@prefix foaf: <http://xmnls.com/foaf/0.1/> .
+@prefix airport: <http://example.org/airports#> .
+@prefix amtrak: <http://amtrak.com/stations#> .
+@prefix app: <http://www.hypercube.co.uk/ontologies/RiskHackathon/AtoB#> .
+@prefix risk: <http://www.hypercube.co.uk/ontologies/RiskHackathon/RiskConcepts#> .
+@prefix : <http://www.hypercube.co.uk/ontologies/RiskHackathon/TripConcepts/trip#> .
+
+# the following should be moved to app
+
+app:Plane 
+  rdfs:subClassOf MotionP:MovingObject .
+
+app:RegionalJet
+  rdfs:subClassOf app:Plane .
+
+app:NarrowBody
+  rdfs:subClassOf app:Plane .
+
+app:Car 
+  rdfs:subClassOf MotionP:MovingObject .
+
+app:Train 
+  rdfs:subClassOf MotionP:MovingObject .
+
+app:RentalCar
+  rdfs:subClassOf MotionP:MovingObject .
+
+app:Compact
+  rdfs:subClassOf app:RentalCar .
+
+app:Intermediate
+  rdfs:subClassOf app:RentalCar .
+
+app:FullSize
+  rdfs:subClassOf app:RentalCar .
+
+foaf:Person
+  rdfs:subClassOf MotionP:MovingObject .
+
+airport:Airport 
+  rdfs:subClassOf traj:Position .
+
+amtrak:TrainStation
+  rdfs:subClassOf traj:Position .
+
+
+# well-known instances
+
+airport:DCA a airport:Airport .
+
+airport:ORD a airport:Airport .
+
+airport:AUS a airport:Airport .
+
+amtrak:WAS a amtrak:TrainStation .
+
+amtrak:AUS a amtrak:TrainStation .
+
+
+# instances and alternatives
+
+:home a traj:Position .
+
+:conferenceCenter a traj:Position .
+
+:car a app:Car .
+
+:goal
+  a risk:Goal;
+  rdfs:comment "Attend a meeting from 9-5 on Wednesday at the conference center in Austin TX";
+  risk:alternative
+    :alternative1 ,
+    :alternative2 ,
+    :alternative3 ,
+    :alternative4 .
+
+:alternative1
+  a traj:SemanticTrajectory;
+  traj:hasSegment
+    [ a traj:Segment;
+      traj:startsFrom [ a traj:Fix; 
+                        traj:location :home ];
+      traj:endsAt [ a traj:Fix;
+                    traj:location :conferenceCenter ];
+      traj:isTraversedBy :car ] ,
+    [ a traj:Segment;
+      traj:startsFrom [ a traj:Fix; 
+                        traj:location :conferenceCenter ];
+      traj:endsAt [ a traj:Fix;
+                    traj:location :home ];
+          traj:isTraversedBy :car ] .
+
+:UA123 a app:RegionalJet .
+
+:intermediate a app:Intermediate .
+
+:UA124 a app:RegionalJet .
+
+:alternative2
+  a traj:SemanticTrajectory;
+  traj:hasSegment
+    [ a traj:Segment;
+      traj:startsFrom [ a traj:Fix; 
+                        traj:location :home ];
+      traj:endsAt [ a traj:Fix;
+                    traj:location airport:DCA ];
+      traj:isTraversedBy :car ] ,
+    [ a traj:Segment;
+      traj:startsFrom [ a traj:Fix; 
+                        traj:location airport:DCA ];
+      traj:endsAt [ a traj:Fix;
+                    traj:location airport:AUS ];
+      traj:isTraversedBy :UA123 ] ,
+    [ a traj:Segment;
+      traj:startsFrom [ a traj:Fix; 
+                        traj:location airport:AUS ];
+      traj:endsAt [ a traj:Fix;
+                    traj:location :conferenceCenter ];
+      traj:isTraversedBy :intermediate ] ,
+    [ a traj:Segment;
+      traj:startsFrom [ a traj:Fix; 
+                        traj:location :conferenceCenter ];
+      traj:endsAt [ a traj:Fix;
+                    traj:location airport:AUS ];
+      traj:isTraversedBy :intermediate ] ,
+    [ a traj:Segment;
+      traj:startsFrom [ a traj:Fix; 
+                        traj:location airport:AUS ];
+      traj:endsAt [ a traj:Fix;
+                    traj:location airport:DCA ];
+      traj:isTraversedBy :UA124 ] ,
+    [ a traj:Segment;
+      traj:startsFrom [ a traj:Fix; 
+                        traj:location airport:DCA ];
+      traj:endsAt [ a traj:Fix;
+                    traj:location :home ];
+          traj:isTraversedBy :car ] .
+
+:UA451 a app:NarrowBody .
+
+:UA501 a app:NarrowBody .
+
+:compact a app:Compact .
+
+:UA502 a app:NarrowBody .
+
+:UA452 a app:NarrowBody .
+
+:alternative3
+  a traj:SemanticTrajectory;
+  traj:hasSegment
+    [ a traj:Segment;
+      traj:startsFrom [ a traj:Fix; 
+                        traj:location :home ];
+      traj:endsAt [ a traj:Fix;
+                    traj:location airport:DCA ];
+      traj:isTraversedBy :car ] ,
+    [ a traj:Segment;
+      traj:startsFrom [ a traj:Fix; 
+                        traj:location airport:DCA ];
+      traj:endsAt [ a traj:Fix;
+                    traj:location airport:ORD ];
+      traj:isTraversedBy :UA451 ] ,
+    [ a traj:Segment;
+      traj:startsFrom [ a traj:Fix; 
+                        traj:location airport:ORD ];
+      traj:endsAt [ a traj:Fix;
+                    traj:location airport:AUS ];
+      traj:isTraversedBy :UA501 ] ,
+    [ a traj:Segment;
+      traj:startsFrom [ a traj:Fix; 
+                        traj:location airport:AUS ];
+      traj:endsAt [ a traj:Fix;
+                    traj:location :conferenceCenter ];
+      traj:isTraversedBy :intermediate ] ,
+    [ a traj:Segment;
+      traj:startsFrom [ a traj:Fix; 
+                        traj:location :conferenceCenter ];
+      traj:endsAt [ a traj:Fix;
+                    traj:location airport:AUS ];
+      traj:isTraversedBy :intermediate ] ,
+    [ a traj:Segment;
+      traj:startsFrom [ a traj:Fix; 
+                        traj:location airport:AUS ];
+      traj:endsAt [ a traj:Fix;
+                    traj:location airport:ORD ];
+      traj:isTraversedBy :UA502 ] ,
+    [ a traj:Segment;
+      traj:startsFrom [ a traj:Fix; 
+                        traj:location airport:ORD ];
+      traj:endsAt [ a traj:Fix;
+                    traj:location airport:DCA ];
+      traj:isTraversedBy :UA452 ] ,
+    [ a traj:Segment;
+      traj:startsFrom [ a traj:Fix; 
+                        traj:location airport:DCA ];
+      traj:endsAt [ a traj:Fix;
+                    traj:location :home ];
+          traj:isTraversedBy :car ] .
+
+:me a foaf:Person .
+
+:Amtrak101 a app:Train .
+
+:Amtrak102 a app:Train .
+
+:alternative4
+  a traj:SemanticTrajectory;
+  traj:hasSegment
+    [ a traj:Segment;
+      traj:startsFrom [ a traj:Fix; 
+                        traj:location :home ];
+      traj:endsAt [ a traj:Fix;
+                    traj:location :WAS ];
+      traj:isTraversedBy :me ] ,
+    [ a traj:Segment;
+      traj:startsFrom [ a traj:Fix; 
+                        traj:location :WAS ];
+      traj:endsAt [ a traj:Fix;
+                    traj:location amtrak:AUS ];
+      traj:isTraversedBy :Amtrak101 ] ,
+    [ a traj:Segment;
+      traj:startsFrom [ a traj:Fix; 
+                        traj:location amtrak:AUS ];
+      traj:endsAt [ a traj:Fix;
+                    traj:location :conferenceCenter ];
+      traj:isTraversedBy :me ] ,
+    [ a traj:Segment;
+      traj:startsFrom [ a traj:Fix; 
+                        traj:location :conferenceCenter ];
+      traj:endsAt [ a traj:Fix;
+                    traj:location amtrak:AUS ];
+      traj:isTraversedBy :me ] ,
+    [ a traj:Segment;
+      traj:startsFrom [ a traj:Fix; 
+                        traj:location amtrak:AUS ];
+      traj:endsAt [ a traj:Fix;
+                    traj:location :WAS ];
+      traj:isTraversedBy :Amtrak102 ] ,
+    [ a traj:Segment;
+      traj:startsFrom [ a traj:Fix; 
+                        traj:location :WAS ];
+      traj:endsAt [ a traj:Fix;
+                    traj:location :home ];
+          traj:isTraversedBy :me ] .

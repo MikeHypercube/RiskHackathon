@@ -1,0 +1,1477 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <Ontology rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#causedBy -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#causedBy">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Agent"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Event"/>
+        <inverseOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#causerOf"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#causerOf -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#causerOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Agent"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Event"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#factorOf -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#factorOf">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Event"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Factor"/>
+        <inverseOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#hasFactor"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#hasFactor -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#hasFactor">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Event"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Factor"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#hasImpact -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#hasImpact">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Event"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Impact"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#injuredBy -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#injuredBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Agent"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Event"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#involves -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#involves">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#MeansOfTransport"/>
+    </ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#entailsAverageDelay -->
+
+    <DatatypeProperty rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#entailsAverageDelay">
+        <rdfs:comment xml:lang="en">some kind of average delay value in seconds</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Delay"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#hasValue -->
+
+    <DatatypeProperty rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#hasValue">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Age"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#isFatal -->
+
+    <DatatypeProperty rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#isFatal">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Accident"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#probabilityOfHappening -->
+
+    <DatatypeProperty rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#probabilityOfHappening">
+        <rdfs:comment xml:lang="en">probability of a certain delay/accident happening (per 1000 miles? per travel time?)</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;float"/>
+        <rdfs:domain>
+            <Class>
+                <unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Accident"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Delay"/>
+                </unionOf>
+            </Class>
+        </rdfs:domain>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#propabilityOfFatal -->
+
+    <DatatypeProperty rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#propabilityOfFatal">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Accident"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Accident -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Accident">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Impact"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Age -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Age">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#HumanFactor"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Agent -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Agent"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#AirCarrier_Delay -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#AirCarrier_Delay">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#FlightDelay"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Air_Traffic_Control -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Air_Traffic_Control">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#National_Aviation_System_Delay"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#AircraftBombing -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#AircraftBombing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Aircraft_InAirAccidents"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#AircraftHijaking -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#AircraftHijaking">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Aircraft_InAirAccidents"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Aircraft_Cleaning -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Aircraft_Cleaning">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#AirCarrier_Delay"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Aircraft_Collision -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Aircraft_Collision">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Aircraft_InAirAccidents"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Aircraft_FuelExhaustion -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Aircraft_FuelExhaustion">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Aircraft_InAirAccidents"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Aircraft_InAirAccidents -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Aircraft_InAirAccidents">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#PlaneAccident"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Aircraft_RunwayAccidents -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Aircraft_RunwayAccidents">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#PlaneAccident"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Aircraft_RunwayOverruns -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Aircraft_RunwayOverruns">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Aircraft_RunwayAccidents"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Airport_Operations -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Airport_Operations">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#National_Aviation_System_Delay"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Alcohol-related -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Alcohol-related">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Impairment"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Alternator_Faults -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Alternator_Faults">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#CarBreakdown"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Animals_On_The_Line -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Animals_On_The_Line">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#RailwayDelay_External"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Autumn -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Autumn">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#RailwayDelay_Weather/Season"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Baggage_Loading -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Baggage_Loading">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#AirCarrier_Delay"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Bicycle -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Bicycle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#MeansOfTransport"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Bicycle-Car_Accidents -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Bicycle-Car_Accidents">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#BicycleCollisions"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#BicycleAccident -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#BicycleAccident">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#RiskEvent"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#hasImpact"/>
+                <someValuesFrom rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Accident"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#involves"/>
+                <someValuesFrom rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Bicycle"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#BicycleCollisions -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#BicycleCollisions">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#BicycleAccident"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Blizzard -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Blizzard">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Extreme_Weather"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Bridge_Strike -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Bridge_Strike">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#RailwayDelay_External"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#BrokenRail -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#BrokenRail">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#RailwayDelay_Infrastructure"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#BuckledRail -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#BuckledRail">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#RailwayDelay_Infrastructure"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Bus -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Bus">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#MotorisedVehicle"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#BusAccident -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#BusAccident">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#RiskEvent"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#involves"/>
+                <someValuesFrom rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Bus"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#hasImpact"/>
+                <someValuesFrom rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Accident"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Cable_Theft -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Cable_Theft">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#RailwayDelay_External"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Car -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Car">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#MotorisedVehicle"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#CarAccident -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#CarAccident">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#RiskEvent"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#hasImpact"/>
+                <someValuesFrom rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Accident"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#involves"/>
+                <someValuesFrom rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Car"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#CarBreakdown -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#CarBreakdown">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#TrafficDelay"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Car_Crossing_Paths -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Car_Crossing_Paths">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#CarAccident"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Car_Driver_Impairment -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Car_Driver_Impairment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#CarAccident"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Car_Lane-change_Crash -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Car_Lane-change_Crash">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#CarAccident"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Car_Off-roadway_Crash -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Car_Off-roadway_Crash">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#CarAccident"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Car_Pedacyclist_Crashes -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Car_Pedacyclist_Crashes">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#CarAccident"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Car_Pedestrian_Crashes -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Car_Pedestrian_Crashes">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#CarAccident"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Car_Rear-end_Crash -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Car_Rear-end_Crash">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#CarAccident"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Car_Reduced_Visibility -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Car_Reduced_Visibility">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#CarAccident"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Car_Vehicle_Instability -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Car_Vehicle_Instability">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#CarAccident"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Causer -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Causer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Agent"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Clutch_Cables -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Clutch_Cables">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#CarBreakdown"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#CostChange -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#CostChange">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Impact"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Daytime -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Daytime">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#EnvironmentalFactor"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Delay -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Delay">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Impact"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Engineering_Works -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Engineering_Works">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#RailwayDelay_Planning"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#EnvironmentalFactor -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#EnvironmentalFactor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Factor"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Event -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Event"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Extreme_Weather -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Extreme_Weather">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#EnvironmentalFactor"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Extreme_Weather_Delay -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Extreme_Weather_Delay">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#FlightDelay"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Factor -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Factor"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Fatality -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Fatality">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#RailwayDelay_External"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Flat/Damaged_Tyres/Wheels -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Flat/Damaged_Tyres/Wheels">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#CarBreakdown"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Flat/Faulty_Battery -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Flat/Faulty_Battery">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#CarBreakdown"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Flight -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Flight">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#MeansOfTransport"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#FlightDelay -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#FlightDelay">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#RiskEvent"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#involves"/>
+                <someValuesFrom rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Flight"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#hasImpact"/>
+                <someValuesFrom rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Delay"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Flooding -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Flooding">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#RailwayDelay_Weather/Season"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Fluctuations_in_Normal_Traffic -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Fluctuations_in_Normal_Traffic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#TrafficDelay_Traffic_Demand"/>
+        <rdfs:comment xml:lang="en">Day-to-day variability in demand leads to some days with higher traffic volumes than others. Varying demand volumes superimposed on a system with fixed capacity also results in variable (i.e., unreliable) travel times, even without any Category 1 events occurring.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Fog -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Fog">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#RailwayDelay_Weather/Season"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Fuel_Problems -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Fuel_Problems">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#CarBreakdown"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Fueling -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Fueling">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#AirCarrier_Delay"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Gender -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Gender">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#HumanFactor"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Glaze -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Glaze">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Ground_configuration"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Ground_configuration -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Ground_configuration">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#EnvironmentalFactor"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#HT_Leads -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#HT_Leads">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#CarBreakdown"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Heavy_Traffic_Volume -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Heavy_Traffic_Volume">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#National_Aviation_System_Delay"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#High_Winds -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#High_Winds">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#RailwayDelay_Weather/Season"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#HumanFactor -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#HumanFactor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Factor"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Hurricane -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Hurricane">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Extreme_Weather"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Impact -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Impact"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Impairment -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Impairment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#HumanFactor"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Injury -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Injury">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Accident"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Inoperative_Screening_Equipment -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Inoperative_Screening_Equipment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Security_Delay"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Landslip -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Landslip">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#RailwayDelay_Infrastructure"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Late-Arriving_Aircraft_Delay -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Late-Arriving_Aircraft_Delay">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#FlightDelay"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Leaves -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Leaves">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#RailwayDelay_Weather/Season"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Lightning_Strikes -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Lightning_Strikes">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#RailwayDelay_Weather/Season"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Limited_Sight -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Limited_Sight">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#EnvironmentalFactor"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Line-side_Fire -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Line-side_Fire">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#RailwayDelay_External"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Long_Waiting_Lines -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Long_Waiting_Lines">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Security_Delay"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Loss -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Loss">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Accident"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Lost_Keys -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Lost_Keys">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#CarBreakdown"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Maintenance_Crew_Problems -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Maintenance_Crew_Problems">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#AirCarrier_Delay"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#MeansOfTransport -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#MeansOfTransport"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Motorcycle -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Motorcycle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#MotorisedVehicle"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#MotorcycleAccident -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#MotorcycleAccident">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#RiskEvent"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#hasImpact"/>
+                <someValuesFrom rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Accident"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#involves"/>
+                <someValuesFrom rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Motorcycle"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#MotorcycleCollisions -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#MotorcycleCollisions">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#MotorcycleAccident"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#MotorisedVehicle -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#MotorisedVehicle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#MeansOfTransport"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#National_Aviation_System_Delay -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#National_Aviation_System_Delay">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#FlightDelay"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Non-extreme_Weather_Conditions -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Non-extreme_Weather_Conditions">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#National_Aviation_System_Delay"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Other -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Other">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#TrainAccident"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#OverheadLineProblems -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#OverheadLineProblems">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#RailwayDelay_Infrastructure"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Pedestrian -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Pedestrian">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#MeansOfTransport"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#PedestrianAccident -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#PedestrianAccident">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#RiskEvent"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#involves"/>
+                <someValuesFrom rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Pedestrian"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#hasImpact"/>
+                <someValuesFrom rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Accident"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Physical_Bottlenecks -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Physical_Bottlenecks">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#TrafficDelay_Physical_Highway_Features"/>
+        <rdfs:comment xml:lang="en">Transportation engineers have long studied and addressed the physical capacity of roadways—the maximum amount of traffic capable of being handled by a given highway section. Capacity is determined by a number of factors: the number and width of lanes and shoulders; merge areas at interchanges; and roadway alignment (grades and curves). Toll booths may also be thought of as a special case of bottlenecks because they restrict the physical flow of traffic. There is also a wild card in the mix of what determines capacity—driver behavior. Research has shown that drivers familiar with routinely congested roadways space themselves closer together than drivers on less congested roadways. This leads to an increase in the amount of traffic that can be handled.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#PlaneAccident -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#PlaneAccident">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#RiskEvent"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#hasImpact"/>
+                <someValuesFrom rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Accident"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#involves"/>
+                <someValuesFrom rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Flight"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#PointsFailure -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#PointsFailure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#RailwayDelay_Infrastructure"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#RailwayDelay -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#RailwayDelay">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#RiskEvent"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#hasImpact"/>
+                <someValuesFrom rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Delay"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#involves"/>
+                <someValuesFrom rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Train"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Hierarchy derived from https://www.networkrail.co.uk/timetables-and-travel/delays-explained/</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#RailwayDelay_External -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#RailwayDelay_External">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#RailwayDelay"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#RailwayDelay_Infrastructure -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#RailwayDelay_Infrastructure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#RailwayDelay"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#RailwayDelay_Planning -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#RailwayDelay_Planning">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#RailwayDelay"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#RailwayDelay_Weather/Season -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#RailwayDelay_Weather/Season">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#RailwayDelay"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#RiskEvent -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#RiskEvent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Event"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Security_Breach -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Security_Breach">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Security_Delay"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Security_Delay -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Security_Delay">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#FlightDelay"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#ShipAccident -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#ShipAccident">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#RiskEvent"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#hasImpact"/>
+                <someValuesFrom rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Accident"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#SignalPowerFailure -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#SignalPowerFailure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#RailwayDelay_Infrastructure"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Sleepy/drowsy -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Sleepy/drowsy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Impairment"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Snow_and_Ice -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Snow_and_Ice">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#RailwayDelay_Weather/Season"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Spark_Plugs -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Spark_Plugs">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#CarBreakdown"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Special_Events -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Special_Events">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#TrafficDelay_Traffic_Demand"/>
+        <rdfs:comment xml:lang="en">Are a special case of demand fluctuations where traffic flow in the vicinity of the event will be radically different from &quot;typical&quot; patterns. Special events occasionally cause &quot;surges&quot; in traffic demand that overwhelm the system.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Starter_Motor -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Starter_Motor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#CarBreakdown"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Summer -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Summer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#RailwayDelay_Weather/Season"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#TelecomsFailure -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#TelecomsFailure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#RailwayDelay_Infrastructure"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Tornado -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Tornado">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Extreme_Weather"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#TrackCircuitFailure -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#TrackCircuitFailure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#RailwayDelay_Infrastructure"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#TrafficDelay -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#TrafficDelay">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#RiskEvent"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#involves"/>
+                <someValuesFrom rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#MotorisedVehicle"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#hasImpact"/>
+                <someValuesFrom rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Delay"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Hierarchy from: http://www.ops.fhwa.dot.gov/congestion_report/chapter2.htm</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#TrafficDelay_Physical_Highway_Features -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#TrafficDelay_Physical_Highway_Features">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#TrafficDelay"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#TrafficDelay_Traffic-influencing_Events -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#TrafficDelay_Traffic-influencing_Events">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#TrafficDelay"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#TrafficDelay_Traffic_Demand -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#TrafficDelay_Traffic_Demand">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#TrafficDelay"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Traffic_Control_Devices -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Traffic_Control_Devices">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#TrafficDelay_Physical_Highway_Features"/>
+        <rdfs:comment xml:lang="en"> Intermittent disruption of traffic flow by control devices such as railroad grade crossings and poorly timed signals also contribute to congestion and travel time variability.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Traffic_Incidents -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Traffic_Incidents">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#TrafficDelay_Traffic-influencing_Events"/>
+        <rdfs:comment xml:lang="en">Are events that disrupt the normal flow of traffic, usually by physical impedance in the travel lanes. Events such as vehicular crashes, breakdowns, and debris in travel lanes are the most common form of incidents. In addition to blocking travel lanes physically, events that occur on the shoulder or roadside can also influence traffic flow by distracting drivers, leading to changes in driver behavior and ultimately degrading the quality of traffic flow. Even incidents off of the roadway (a fire in a building next to a highway) can be considered traffic incidents if they affect travel in the travel lanes.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Train -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Train">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#MeansOfTransport"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#TrainAccident -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#TrainAccident">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#RiskEvent"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#involves"/>
+                <someValuesFrom rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Train"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#hasFactor"/>
+                <someValuesFrom rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Accident"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#TrainCollision -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#TrainCollision">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#TrainAccident"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#TrainDerailment -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#TrainDerailment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#TrainAccident"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#TrainDerailment_Curve -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#TrainDerailment_Curve">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#TrainDerailment"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#TrainDerailment_Junction -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#TrainDerailment_Junction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#TrainDerailment"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#TrainDerailment_PlainTrack -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#TrainDerailment_PlainTrack">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#TrainDerailment"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Train_CollisionWithBufferStop -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Train_CollisionWithBufferStop">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#TrainCollision"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Train_CollisionsWithPeople -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Train_CollisionsWithPeople">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Other"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Train_FallsFromTrains -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Train_FallsFromTrains">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Other"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Train_Fire/Explosion -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Train_Fire/Explosion">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Other"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Train_Head-OnCollision -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Train_Head-OnCollision">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#TrainCollision"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Train_Obstruction_Avalanche -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Train_Obstruction_Avalanche">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Train_ObstructionsOnTrack"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Train_Obstruction_Landslide -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Train_Obstruction_Landslide">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Train_ObstructionsOnTrack"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Train_Obstruction_Vehicles -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Train_Obstruction_Vehicles">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Train_ObstructionsOnTrack"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Train_ObstructionsOnTrack -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Train_ObstructionsOnTrack">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#TrainCollision"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Train_RearCollision -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Train_RearCollision">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#TrainCollision"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Vandalism_and_Trespass -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Vandalism_and_Trespass">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#RailwayDelay_External"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Victim -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Victim">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Agent"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Weather -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Weather">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#TrafficDelay_Traffic-influencing_Events"/>
+        <rdfs:comment xml:lang="en">Environmental conditions can lead to changes in driver behavior that affect traffic flow. Due to reduced visibility, drivers will usually lower their speeds and increase their headways when precipitation, bright sunlight on the horizon, fog, or smoke are present. Wet, snowy, or icy roadway surface conditions will also lead to the same effect even after precipitation has ended.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Weather_Causes -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Weather_Causes">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#MotorcycleAccident"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Winter -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Winter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#RailwayDelay_Weather/Season"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Work_Zones -->
+
+    <Class rdf:about="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#Work_Zones">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91#TrafficDelay_Traffic-influencing_Events"/>
+        <rdfs:comment xml:lang="en">Are events that disrupt the normal flow of traffic, usually by physical impedance in the travel lanes. Events such as vehicular crashes, breakdowns, and debris in travel lanes are the most common form of incidents. In addition to blocking travel lanes physically, events that occur on the shoulder or roadside can also influence traffic flow by distracting drivers, leading to changes in driver behavior and ultimately degrading the quality of traffic flow. Even incidents off of the roadway (a fire in a building next to a highway) can be considered traffic incidents if they affect travel in the travel lanes.</rdfs:comment>
+    </Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

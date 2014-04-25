@@ -1,0 +1,1199 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://www.semanticweb.org/hoppe/ontologies/2014/2/untitled-ontology-91">
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Declaration>
+        <Class IRI="#Accident"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Age"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Agent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AirCarrier_Delay"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Air_Traffic_Control"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AircraftBombing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AircraftHijaking"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Aircraft_Cleaning"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Aircraft_Collision"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Aircraft_FuelExhaustion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Aircraft_InAirAccidents"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Aircraft_RunwayAccidents"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Aircraft_RunwayOverruns"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Airport_Operations"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Alcohol-related"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Alternator_Faults"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Animals_On_The_Line"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Autumn"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Baggage_Loading"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Bicycle"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Bicycle-Car_Accidents"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BicycleAccident"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BicycleCollisions"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Blizzard"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Bridge_Strike"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BrokenRail"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BuckledRail"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Bus"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BusAccident"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Cable_Theft"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Car"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CarAccident"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CarBreakdown"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Car_Crossing_Paths"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Car_Driver_Impairment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Car_Lane-change_Crash"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Car_Off-roadway_Crash"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Car_Pedacyclist_Crashes"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Car_Pedestrian_Crashes"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Car_Rear-end_Crash"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Car_Reduced_Visibility"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Car_Vehicle_Instability"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Clutch_Cables"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Daytime"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Delay"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Engineering_Works"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EnvironmentalFactor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Event"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Extreme_Weather"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Extreme_Weather_Delay"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Factor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Fatality"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Flat/Damaged_Tyres/Wheels"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Flat/Faulty_Battery"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Flight"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FlightDelay"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Flooding"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Fluctuations_in_Normal_Traffic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Fog"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Fuel_Problems"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Fueling"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Gender"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Glaze"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Ground_configuration"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HT_Leads"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Heavy_Traffic_Volume"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#High_Winds"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HumanFactor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Hurricane"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Impairment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Inoperative_Screening_Equipment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Landslip"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Late-Arriving_Aircraft_Delay"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Leaves"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Lightning_Strikes"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Limited_Sight"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Line-side_Fire"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Long_Waiting_Lines"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Lost_Keys"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Maintenance_Crew_Problems"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MeansOfTransport"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Motorcycle"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MotorcycleAccident"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MotorcycleCollisions"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MotorisedVehicle"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#National_Aviation_System_Delay"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Non-extreme_Weather_Conditions"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Other"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OverheadLineProblems"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Pedestrian"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PedestrianAccident"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Physical_Bottlenecks"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PlaneAccident"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PointsFailure"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RailwayDelay"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RailwayDelay_External"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RailwayDelay_Infrastructure"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RailwayDelay_Planning"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RailwayDelay_Weather/Season"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Security_Breach"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Security_Delay"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ShipAccident"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SignalPowerFailure"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sleepy/drowsy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Snow_and_Ice"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Spark_Plugs"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Special_Events"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Starter_Motor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Summer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TelecomsFailure"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Tornado"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TrackCircuitFailure"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TrafficDelay"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TrafficDelay_Physical_Highway_Features"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TrafficDelay_Traffic-influencing_Events"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TrafficDelay_Traffic_Demand"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Traffic_Control_Devices"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Traffic_Incidents"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Train"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TrainAccident"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TrainCollision"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TrainDerailment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TrainDerailment_Curve"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TrainDerailment_Junction"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TrainDerailment_PlainTrack"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Train_CollisionWithBufferStop"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Train_CollisionsWithPeople"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Train_FallsFromTrains"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Train_Fire/Explosion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Train_Head-OnCollision"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Train_Obstruction_Avalanche"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Train_Obstruction_Landslide"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Train_Obstruction_Vehicles"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Train_ObstructionsOnTrack"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Train_RearCollision"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Vandalism_and_Trespass"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Weather"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Weather_Causes"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Winter"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Work_Zones"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasImpactFactor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#involves"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#entailsAverageDelay"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#isFatal"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#probabilityOfHappening"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#propabilityOfFatal"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Accident"/>
+        <Class IRI="#Event"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Age"/>
+        <Class IRI="#HumanFactor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AirCarrier_Delay"/>
+        <Class IRI="#FlightDelay"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Air_Traffic_Control"/>
+        <Class IRI="#National_Aviation_System_Delay"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AircraftBombing"/>
+        <Class IRI="#Aircraft_InAirAccidents"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AircraftHijaking"/>
+        <Class IRI="#Aircraft_InAirAccidents"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Aircraft_Cleaning"/>
+        <Class IRI="#AirCarrier_Delay"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Aircraft_Collision"/>
+        <Class IRI="#Aircraft_InAirAccidents"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Aircraft_FuelExhaustion"/>
+        <Class IRI="#Aircraft_InAirAccidents"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Aircraft_InAirAccidents"/>
+        <Class IRI="#PlaneAccident"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Aircraft_RunwayAccidents"/>
+        <Class IRI="#PlaneAccident"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Aircraft_RunwayOverruns"/>
+        <Class IRI="#Aircraft_RunwayAccidents"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Airport_Operations"/>
+        <Class IRI="#National_Aviation_System_Delay"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Alcohol-related"/>
+        <Class IRI="#Impairment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Alternator_Faults"/>
+        <Class IRI="#CarBreakdown"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Animals_On_The_Line"/>
+        <Class IRI="#RailwayDelay_External"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Autumn"/>
+        <Class IRI="#RailwayDelay_Weather/Season"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Baggage_Loading"/>
+        <Class IRI="#AirCarrier_Delay"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Bicycle"/>
+        <Class IRI="#MeansOfTransport"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Bicycle-Car_Accidents"/>
+        <Class IRI="#BicycleCollisions"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BicycleAccident"/>
+        <Class IRI="#Accident"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BicycleAccident"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#involves"/>
+            <Class IRI="#Bicycle"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BicycleCollisions"/>
+        <Class IRI="#BicycleAccident"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Blizzard"/>
+        <Class IRI="#Extreme_Weather"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Bridge_Strike"/>
+        <Class IRI="#RailwayDelay_External"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BrokenRail"/>
+        <Class IRI="#RailwayDelay_Infrastructure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BuckledRail"/>
+        <Class IRI="#RailwayDelay_Infrastructure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Bus"/>
+        <Class IRI="#MotorisedVehicle"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BusAccident"/>
+        <Class IRI="#Accident"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BusAccident"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#involves"/>
+            <Class IRI="#Bus"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cable_Theft"/>
+        <Class IRI="#RailwayDelay_External"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Car"/>
+        <Class IRI="#MotorisedVehicle"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CarAccident"/>
+        <Class IRI="#Accident"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CarAccident"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#involves"/>
+            <Class IRI="#Car"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CarBreakdown"/>
+        <Class IRI="#TrafficDelay"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Car_Crossing_Paths"/>
+        <Class IRI="#CarAccident"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Car_Driver_Impairment"/>
+        <Class IRI="#CarAccident"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Car_Lane-change_Crash"/>
+        <Class IRI="#CarAccident"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Car_Off-roadway_Crash"/>
+        <Class IRI="#CarAccident"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Car_Pedacyclist_Crashes"/>
+        <Class IRI="#CarAccident"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Car_Pedestrian_Crashes"/>
+        <Class IRI="#CarAccident"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Car_Rear-end_Crash"/>
+        <Class IRI="#CarAccident"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Car_Reduced_Visibility"/>
+        <Class IRI="#CarAccident"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Car_Vehicle_Instability"/>
+        <Class IRI="#CarAccident"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Clutch_Cables"/>
+        <Class IRI="#CarBreakdown"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Daytime"/>
+        <Class IRI="#Factor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Delay"/>
+        <Class IRI="#Event"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Engineering_Works"/>
+        <Class IRI="#RailwayDelay_Planning"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EnvironmentalFactor"/>
+        <Class IRI="#Factor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Extreme_Weather"/>
+        <Class IRI="#EnvironmentalFactor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Extreme_Weather_Delay"/>
+        <Class IRI="#FlightDelay"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Extreme_Weather_Delay"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasImpactFactor"/>
+            <Class IRI="#Extreme_Weather"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fatality"/>
+        <Class IRI="#RailwayDelay_External"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Flat/Damaged_Tyres/Wheels"/>
+        <Class IRI="#CarBreakdown"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Flat/Faulty_Battery"/>
+        <Class IRI="#CarBreakdown"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Flight"/>
+        <Class IRI="#MeansOfTransport"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FlightDelay"/>
+        <Class IRI="#Delay"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FlightDelay"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#involves"/>
+            <Class IRI="#Flight"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Flooding"/>
+        <Class IRI="#RailwayDelay_Weather/Season"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fluctuations_in_Normal_Traffic"/>
+        <Class IRI="#TrafficDelay_Traffic_Demand"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fog"/>
+        <Class IRI="#RailwayDelay_Weather/Season"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fuel_Problems"/>
+        <Class IRI="#CarBreakdown"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fueling"/>
+        <Class IRI="#AirCarrier_Delay"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Gender"/>
+        <Class IRI="#HumanFactor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Glaze"/>
+        <Class IRI="#Ground_configuration"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ground_configuration"/>
+        <Class IRI="#EnvironmentalFactor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HT_Leads"/>
+        <Class IRI="#CarBreakdown"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Heavy_Traffic_Volume"/>
+        <Class IRI="#National_Aviation_System_Delay"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#High_Winds"/>
+        <Class IRI="#RailwayDelay_Weather/Season"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HumanFactor"/>
+        <Class IRI="#Factor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Hurricane"/>
+        <Class IRI="#Extreme_Weather"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Impairment"/>
+        <Class IRI="#HumanFactor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Inoperative_Screening_Equipment"/>
+        <Class IRI="#Security_Delay"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Landslip"/>
+        <Class IRI="#RailwayDelay_Infrastructure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Late-Arriving_Aircraft_Delay"/>
+        <Class IRI="#FlightDelay"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Leaves"/>
+        <Class IRI="#RailwayDelay_Weather/Season"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Lightning_Strikes"/>
+        <Class IRI="#RailwayDelay_Weather/Season"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Limited_Sight"/>
+        <Class IRI="#EnvironmentalFactor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Line-side_Fire"/>
+        <Class IRI="#RailwayDelay_External"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Long_Waiting_Lines"/>
+        <Class IRI="#Security_Delay"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Lost_Keys"/>
+        <Class IRI="#CarBreakdown"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Maintenance_Crew_Problems"/>
+        <Class IRI="#AirCarrier_Delay"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Motorcycle"/>
+        <Class IRI="#MotorisedVehicle"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MotorcycleAccident"/>
+        <Class IRI="#Accident"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MotorcycleAccident"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#involves"/>
+            <Class IRI="#Motorcycle"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MotorcycleCollisions"/>
+        <Class IRI="#MotorcycleAccident"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MotorisedVehicle"/>
+        <Class IRI="#MeansOfTransport"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#National_Aviation_System_Delay"/>
+        <Class IRI="#FlightDelay"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Non-extreme_Weather_Conditions"/>
+        <Class IRI="#National_Aviation_System_Delay"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Other"/>
+        <Class IRI="#TrainAccident"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OverheadLineProblems"/>
+        <Class IRI="#RailwayDelay_Infrastructure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Pedestrian"/>
+        <Class IRI="#MeansOfTransport"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PedestrianAccident"/>
+        <Class IRI="#Accident"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PedestrianAccident"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#involves"/>
+            <Class IRI="#Pedestrian"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Physical_Bottlenecks"/>
+        <Class IRI="#TrafficDelay_Physical_Highway_Features"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PlaneAccident"/>
+        <Class IRI="#Accident"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PlaneAccident"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#involves"/>
+            <Class IRI="#Flight"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PointsFailure"/>
+        <Class IRI="#RailwayDelay_Infrastructure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RailwayDelay"/>
+        <Class IRI="#Delay"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RailwayDelay"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#involves"/>
+            <Class IRI="#Train"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RailwayDelay_External"/>
+        <Class IRI="#RailwayDelay"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RailwayDelay_Infrastructure"/>
+        <Class IRI="#RailwayDelay"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RailwayDelay_Planning"/>
+        <Class IRI="#RailwayDelay"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RailwayDelay_Weather/Season"/>
+        <Class IRI="#RailwayDelay"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RailwayDelay_Weather/Season"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasImpactFactor"/>
+            <Class IRI="#EnvironmentalFactor"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Security_Breach"/>
+        <Class IRI="#Security_Delay"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Security_Delay"/>
+        <Class IRI="#FlightDelay"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ShipAccident"/>
+        <Class IRI="#Accident"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SignalPowerFailure"/>
+        <Class IRI="#RailwayDelay_Infrastructure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sleepy/drowsy"/>
+        <Class IRI="#Impairment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Snow_and_Ice"/>
+        <Class IRI="#RailwayDelay_Weather/Season"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Spark_Plugs"/>
+        <Class IRI="#CarBreakdown"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Special_Events"/>
+        <Class IRI="#TrafficDelay_Traffic_Demand"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Starter_Motor"/>
+        <Class IRI="#CarBreakdown"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Summer"/>
+        <Class IRI="#RailwayDelay_Weather/Season"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TelecomsFailure"/>
+        <Class IRI="#RailwayDelay_Infrastructure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tornado"/>
+        <Class IRI="#Extreme_Weather"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TrackCircuitFailure"/>
+        <Class IRI="#RailwayDelay_Infrastructure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TrafficDelay"/>
+        <Class IRI="#Delay"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TrafficDelay"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#involves"/>
+            <Class IRI="#MotorisedVehicle"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TrafficDelay_Physical_Highway_Features"/>
+        <Class IRI="#TrafficDelay"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TrafficDelay_Traffic-influencing_Events"/>
+        <Class IRI="#TrafficDelay"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TrafficDelay_Traffic_Demand"/>
+        <Class IRI="#TrafficDelay"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Traffic_Control_Devices"/>
+        <Class IRI="#TrafficDelay_Physical_Highway_Features"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Traffic_Incidents"/>
+        <Class IRI="#TrafficDelay_Traffic-influencing_Events"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Train"/>
+        <Class IRI="#MeansOfTransport"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TrainAccident"/>
+        <Class IRI="#Accident"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TrainAccident"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#involves"/>
+            <Class IRI="#Train"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TrainCollision"/>
+        <Class IRI="#TrainAccident"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TrainDerailment"/>
+        <Class IRI="#TrainAccident"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TrainDerailment_Curve"/>
+        <Class IRI="#TrainDerailment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TrainDerailment_Junction"/>
+        <Class IRI="#TrainDerailment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TrainDerailment_PlainTrack"/>
+        <Class IRI="#TrainDerailment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Train_CollisionWithBufferStop"/>
+        <Class IRI="#TrainCollision"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Train_CollisionsWithPeople"/>
+        <Class IRI="#Other"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Train_FallsFromTrains"/>
+        <Class IRI="#Other"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Train_Fire/Explosion"/>
+        <Class IRI="#Other"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Train_Head-OnCollision"/>
+        <Class IRI="#TrainCollision"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Train_Obstruction_Avalanche"/>
+        <Class IRI="#Train_ObstructionsOnTrack"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Train_Obstruction_Landslide"/>
+        <Class IRI="#Train_ObstructionsOnTrack"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Train_Obstruction_Vehicles"/>
+        <Class IRI="#Train_ObstructionsOnTrack"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Train_ObstructionsOnTrack"/>
+        <Class IRI="#TrainCollision"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Train_RearCollision"/>
+        <Class IRI="#TrainCollision"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Vandalism_and_Trespass"/>
+        <Class IRI="#RailwayDelay_External"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Weather"/>
+        <Class IRI="#TrafficDelay_Traffic-influencing_Events"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Weather_Causes"/>
+        <Class IRI="#MotorcycleAccident"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Winter"/>
+        <Class IRI="#RailwayDelay_Weather/Season"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Work_Zones"/>
+        <Class IRI="#TrafficDelay_Traffic-influencing_Events"/>
+    </SubClassOf>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasImpactFactor"/>
+        <ObjectUnionOf>
+            <Class IRI="#Accident"/>
+            <Class IRI="#Delay"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasImpactFactor"/>
+        <Class IRI="#Factor"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#involves"/>
+        <Class IRI="#MeansOfTransport"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#entailsAverageDelay"/>
+        <Class IRI="#Delay"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#isFatal"/>
+        <Class IRI="#Accident"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#probabilityOfHappening"/>
+        <ObjectUnionOf>
+            <Class IRI="#Accident"/>
+            <Class IRI="#Delay"/>
+        </ObjectUnionOf>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#propabilityOfFatal"/>
+        <Class IRI="#Accident"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#entailsAverageDelay"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#isFatal"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#probabilityOfHappening"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#propabilityOfFatal"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Fluctuations_in_Normal_Traffic</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Day-to-day variability in demand leads to some days with higher traffic volumes than others. Varying demand volumes superimposed on a system with fixed capacity also results in variable (i.e., unreliable) travel times, even without any Category 1 events occurring.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Physical_Bottlenecks</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Transportation engineers have long studied and addressed the physical capacity of roadways—the maximum amount of traffic capable of being handled by a given highway section. Capacity is determined by a number of factors: the number and width of lanes and shoulders; merge areas at interchanges; and roadway alignment (grades and curves). Toll booths may also be thought of as a special case of bottlenecks because they restrict the physical flow of traffic. There is also a wild card in the mix of what determines capacity—driver behavior. Research has shown that drivers familiar with routinely congested roadways space themselves closer together than drivers on less congested roadways. This leads to an increase in the amount of traffic that can be handled.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#RailwayDelay</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Hierarchy derived from https://www.networkrail.co.uk/timetables-and-travel/delays-explained/</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Special_Events</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Are a special case of demand fluctuations where traffic flow in the vicinity of the event will be radically different from &quot;typical&quot; patterns. Special events occasionally cause &quot;surges&quot; in traffic demand that overwhelm the system.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#TrafficDelay</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Hierarchy from: http://www.ops.fhwa.dot.gov/congestion_report/chapter2.htm</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Traffic_Control_Devices</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral"> Intermittent disruption of traffic flow by control devices such as railroad grade crossings and poorly timed signals also contribute to congestion and travel time variability.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Traffic_Incidents</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Are events that disrupt the normal flow of traffic, usually by physical impedance in the travel lanes. Events such as vehicular crashes, breakdowns, and debris in travel lanes are the most common form of incidents. In addition to blocking travel lanes physically, events that occur on the shoulder or roadside can also influence traffic flow by distracting drivers, leading to changes in driver behavior and ultimately degrading the quality of traffic flow. Even incidents off of the roadway (a fire in a building next to a highway) can be considered traffic incidents if they affect travel in the travel lanes.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Weather</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Environmental conditions can lead to changes in driver behavior that affect traffic flow. Due to reduced visibility, drivers will usually lower their speeds and increase their headways when precipitation, bright sunlight on the horizon, fog, or smoke are present. Wet, snowy, or icy roadway surface conditions will also lead to the same effect even after precipitation has ended.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Work_Zones</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Are events that disrupt the normal flow of traffic, usually by physical impedance in the travel lanes. Events such as vehicular crashes, breakdowns, and debris in travel lanes are the most common form of incidents. In addition to blocking travel lanes physically, events that occur on the shoulder or roadside can also influence traffic flow by distracting drivers, leading to changes in driver behavior and ultimately degrading the quality of traffic flow. Even incidents off of the roadway (a fire in a building next to a highway) can be considered traffic incidents if they affect travel in the travel lanes.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#entailsAverageDelay</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">some kind of average delay value in seconds</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#probabilityOfHappening</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">probability of a certain delay/accident happening (per 1000 miles? per travel time?)</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

@@ -1,0 +1,351 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#"
+     xml:base="http://www.semanticweb.org/ontologies/2014/2/RiskConcepts"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/ontologies/2014/2/RiskConcepts">
+        <owl:imports rdf:resource="http://purl.org/NET/c4dm/event.owl"/>
+        <owl:imports rdf:resource="http://www.omg.org/spec/EDMC-FIBO/FND/GoalsAndObjectives/Goals/"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#affect -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#affect">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#Activity"/>
+        <rdfs:range rdf:resource="&owl;Thing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#hasGoal -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#hasGoal"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#hasImpact -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#hasImpact"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#hasLikelihood -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#hasLikelihood">
+        <rdfs:domain rdf:resource="http://purl.org/NET/c4dm/event.owl#Event"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#Probability"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#hasPerspective -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#hasPerspective"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#hasSeverity -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#hasSeverity"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#impacts -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#impacts">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#Impact"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#isAdverse -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#isAdverse">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#Impact"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#Loss"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#isBeneficial"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#isBeneficial -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#isBeneficial">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#Gain"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#Impact"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#isGoalOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#isGoalOf">
+        <rdfs:domain rdf:resource="http://www.omg.org/spec/EDMC-FIBO/FND/GoalsAndObjectives/Goals/Goal"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#hasGoal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#manifestsAs -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#manifestsAs">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#Risk"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#RiskEvent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#exposure -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#exposure">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#Risk"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/NET/c4dm/event.owl#Product -->
+
+    <rdf:Description rdf:about="http://purl.org/NET/c4dm/event.owl#Product">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#Outcome"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.cenidet.edu.mx/OntoiStar.owl#IntentionalElement -->
+
+    <owl:Class rdf:about="http://www.cenidet.edu.mx/OntoiStar.owl#IntentionalElement"/>
+    
+
+
+    <!-- http://www.omg.org/spec/EDMC-FIBO/FND/GoalsAndObjectives/Goals/Goal -->
+
+    <rdf:Description rdf:about="http://www.omg.org/spec/EDMC-FIBO/FND/GoalsAndObjectives/Goals/Goal">
+        <rdfs:subClassOf rdf:resource="http://www.cenidet.edu.mx/OntoiStar.owl#IntentionalElement"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#isGoalOf"/>
+                <owl:someValuesFrom rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#Accident -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#Accident">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#Impact"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#Activity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#Activity">
+        <rdfs:subClassOf rdf:resource="http://www.cenidet.edu.mx/OntoiStar.owl#IntentionalElement"/>
+        <rdfs:comment>Something performed by an agent to satisfy some of its goals (objectives). Carries some risk.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#Delay -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#Delay">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#Impact"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#Fatality -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#Fatality">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#Severity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#Gain -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#Gain">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#Impact"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#Loss"/>
+        <rdfs:comment>A measure of the consequence of a specified beneficial outcome upon the agent that is affected </rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#Impact -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#Impact">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#impacts"/>
+                <owl:someValuesFrom rdf:resource="http://www.omg.org/spec/EDMC-FIBO/FND/GoalsAndObjectives/Goals/Goal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#Outcome"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#hasSeverity"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#Severity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>a quantification of the consequence of the outcomes of an identified event  or events  if the event actually occurred  typically this will be an estimate of that consequence.  It is expressed in comparable terms that enable the assessor to compare the consequences of different outcomes</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#Loss -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#Loss">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#Impact"/>
+        <rdfs:comment>A measure of the consequence of a specified adverse outcome upon the agent that is affected </rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#Outcome -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#Outcome">
+        <rdfs:comment>A change in the state of the environment that can be observed and tested in order to determine whether it has or has not occurred it may be a single happening or it may be the consequence of an complex sequence of events,  each of which is a simple  occurent thing.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#Probability -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#Probability">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#hasLikelihood"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#Probability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A measure of the likelihood  that a specified event or set of events may occur  expressed on a linear scale from 0 where there is no measurable likelihood of the eventoccurring in a specified time horizon, to 1 where the event is certain to occur.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#RecurrentEvent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#RecurrentEvent">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NET/c4dm/event.owl#Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#Risk -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#Risk">
+        <rdfs:comment>Risk combines the possibility/likelihood that an event will occur and the severity of its impact to the achievement of an agent&apos;s goals (objectives)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#RiskEvent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#RiskEvent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#RecurrentEvent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#hasPerspective"/>
+                <owl:someValuesFrom rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#hasImpact"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#Impact"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#Severity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#Severity">
+        <rdfs:comment>Amount of Impact to a Goal, as perceived by the Agent that desires to satisfy the goal</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#death -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#death">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#Outcome"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#injury -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#injury">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2014/2/RiskConcepts#Outcome"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
